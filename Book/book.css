@@ -20,6 +20,7 @@
     outline:1px solid black;
   }
   
+  
   .page {
     width:50%;
     height:100%;
@@ -93,6 +94,42 @@
     opacity:1;  
   }
   
+  #seventeen:checked + .page {
+    z-index: 17;
+  }
+  #sixteen:checked + .page {
+    z-index: 16;
+  }
+  #fiveteen:checked + .page {
+    z-index: 15;
+  }
+  #fourteen:checked + .page {
+    z-index: 14;
+  }
+  #thirteen:checked + .page {
+    z-index: 13;
+  }
+  #twelve:checked + .page {
+    z-index: 12;
+  }
+  #eleven:checked + .page {
+    z-index: 11;
+  }
+  #ten:checked + .page {
+    z-index: 10;
+  }
+  #nine:checked + .page {
+    z-index: 9;
+  }
+  #eight:checked + .page {
+    z-index: 8;
+  }
+  #seven:checked + .page {
+    z-index: 7;
+  }
+  #six:checked + .page {
+    z-index: 6;
+  }
   #five:checked + .page {
     z-index:5;
   }
@@ -110,11 +147,8 @@
   }
   
   body {
-    width:100vw;
-    height:100vh;
     overflow:hidden;
-    background-color:azure;
-    background-image:linear-gradient(-45deg, white, black);
+    background: url(background.jpg);
   }
   
   /* interior pages styles */
@@ -148,196 +182,45 @@
   }
   
   #page2 .front {
-    font-size:25vh;
-    font-family:serif;
-    font-weight:900;
-    background: dodgerblue;
-  animation:L 10s linear infinite;
+    background: white;    
   }
-  @keyframes L {
-    50% { color:dodgerblue; background:white; }
-  }
-  
+
   #page2 .back {
     font-size:14px;
-    background:white;
-    color:#222;
+    background:white;    
   }
   
-  @keyframes p {
-    50% { text-shadow:13px 13px 0px white, 16px 16px 0px; } 
+  img{
+    margin-top: 60px;
+    width: 300px;
+    height: 200px;
   }
-  
-  #page3 .front {
-    background:#222;
-    color:lime;
-    font-size:25vh;
-    font-weight:900;
-    font-family:serif;
-    overflow:hidden;
-  }
-  #page3 .front:before {
-    content:'';
-    width:100%;
-    height:100%;
-    position:absolute;
-    top:0;
-    left:0;
-    background:radial-gradient(circle, #222 40%, transparent 40%);
-    background-size:.5vh .5vh;
-    background-position:-.5vh;
-    animation:h 15s linear infinite;
-  }
-  @keyframes h {
-    100% { background-position:.5vh 0%; }
-  }
-  #page3 .front:after {
-    content:'H';
-    width:100%;
-    height:100%;
-    position:absolute;
-    top:-1px;
-    left:-10px;
-    color:#222;
-    text-shadow:-1px 0px lime, -1px -1px lime, -1px 1px lime;
-  }
-  
+
   #page3 .back {
     font-size:14px;
     color:white;
     background:#222;
     animation:a 3s linear infinite;;
   }
-  
-  #page3 .back:before {
-    content:'A';
-    width:100%;
-    height:100%;
-    text-align:center;
-    line-height:17vh;
-    position:absolute;
-    left:0;
-    top:0;
-    transform:scaleY(-1);
-    opacity:.25;
-    animation:aa 1s linear infinite;
-  }
-  @keyframes aa {
-    50% { left:5px } 
-  }
-  #page3 .back:after {
-    content:'';
-    width:100%;
-    height:20vh;
-    text-align:center;
-    position:absolute;
-    left:0;
-    bottom:-2px;
-    background:linear-gradient(to top, #222 50%, transparent);
+
+  #page3 .front {
+    background:#222;
+
   }
   
-  #page4 {
-    overflow:hidden;
-    background:white;
-    
-  }
+  
   #page4 .front {
-    width:25%;
-    height:20vh;
-    background:gold;
-    position:absolute;
-    top:15vh;
-    left:30%;
-    color:transparent;
-    transform:skewY(-10deg) skewX(-10deg);
-    mix-blend-mode:multiply;
-    animation:b 10s linear infinite;
+    background: white;    
   }
-  @keyframes b {
-    50% { filter:hue-rotate(360deg); }
-  }
-  
-  #page4 .front:before{
-    content:'';
-    width:200%;
-    height:40%;
-    background:violet;
-    position:absolute;
-    top:15%;
-    left:-10%;
-    border-radius:0 50px 50px 0;
-    mix-blend-mode:multiply;
-    transform:skewY(10deg);  
-  }
-  
-  #page4 .front:after{
-    content:'';
-    width:200%;
-    height:40%;
-    background:cyan;
-    position:absolute;
-    top:55%;
-    left:-10%;
-    border-radius:0 50px 50px 0;
-    mix-blend-mode:multiply;
-    transform:skewY(10deg);
-  }
+
   
   #page4 .back {
-    height:calc(100% + 10px);
-    background: linear-gradient(#ffffff 50%, rgba(255,255,255,0) 0) 0 0,
-  radial-gradient(circle closest-side, #FFFFFF 53%, rgba(255,255,255,0) 0) 0 0,
-  radial-gradient(circle closest-side, #FFFFFF 50%, rgba(255,255,255,0) 0) 55px 0 #48B;
-  background-size: 110px 50vh;
-  background-repeat: repeat-x;
+    font-size:14px;
     color:white;
-    font-size:25vh;
-    font-weight:900;
-    font-family:serif;  
-    text-shadow:-1px -1px #48B, 1px -1px #48B, 1px 1px #48B, -1px 1px #48B;
-    animation:bob 10s linear infinite;
-  }
-  
-  @keyframes bob {
-    25% { top:-10px }
-    50% { top:0px; }
-    75% { top:-10px; }
-  }
-  
-  #page4 .back:before {
-    content:'';
-    position:absolute;
-    top:25%;
-    left:40%;
-    background:white;
-    box-shadow:0 0 2px black;
-    width:2.5vh;
-    height:5vh;
-    border-radius:75% 0 75% 0
-  }
-  
-  #page4 .back:after {
-    content:'';
-    position:absolute;
-    top:24%;
-    left:43%;
-    background:radial-gradient(circle at 65% 45%, gray 15%, white 15%);
-    box-shadow:0 0 2px black;
-    width:2vh;
-    height:2vh;
-    border-radius:75% 75% 0% 75%;
-    transform:rotate(-45deg);
-  }
-  
-  #page5 .front {
-    color:gold;
-    font-size:25vh;
-    font-weight:900;
-    font-family:serif;
     background:#222;
-    text-shadow:24px 24px purple;
-    animation:slide 10s linear infinite;
-    }
+    animation:a 3s linear infinite;;
+  }
+ 
   
   @keyframes slide {
     25% { text-shadow:-24px 24px purple; }
@@ -346,7 +229,126 @@
     100% { text-shadow:24px 24px purple; }
   }
   
+  #page5 .front {
+    background: white;    
+  }
+
   #page5 .back {
+    font-size:14px;
+    background:white;    
+  }
+
+  #page6 .back {
+    font-size:14px;
+    color:white;
+    background:#222;
+    animation:a 3s linear infinite;;
+  }
+
+  #page6 .front {
+    background:#222;
+
+  }
+
+  #page7 .front {
+    background: white;    
+  }
+
+  #page7 .back {
+    font-size:14px;
+    background:white;    
+  }
+
+  #page8 .back {
+    font-size:14px;
+    color:white;
+    background:#222;
+    animation:a 3s linear infinite;;
+  }
+
+  #page8 .front {
+    background:#222;
+
+  }
+
+  #page9 .front {
+    background: white;    
+  }
+
+  #page9 .back {
+    font-size:14px;
+    background:white;    
+  }
+
+  #page10 .back {
+    font-size:14px;
+    color:white;
+    background:#222;
+    animation:a 3s linear infinite;;
+  }
+
+  #page10 .front {
+    background:#222;
+
+  }
+
+  #page11 .front {
+    background: white;    
+  }
+
+  #page11 .back {
+    font-size:14px;
+    background:white;    
+  }
+
+  #page12 .back {
+    font-size:14px;
+    color:white;
+    background:#222;
+    animation:a 3s linear infinite;;
+  }
+
+  #page12 .front {
+    background:#222;
+
+  }
+
+  #page13 .front {
+    background: white;    
+  }
+
+  #page13 .back {
+    font-size:14px;
+    background:white;    
+  }
+
+  #page14 .back {
+    font-size:14px;
+    color:white;
+    background:#222;
+    animation:a 3s linear infinite;;
+  }
+
+  #page14 .front {
+    background:#222;
+
+  }
+
+  #page15 .front {
+    background: white;    
+  }
+
+  #page15 .back {
+    font-size:14px;
+    background:white;    
+  }
+
+  #page16 .front {
+    background:#222;
+
+  }
+
+  #page16 .back {
     font-size:2vh;
     letter-spacing:2vh;
     line-height:50vh;
